@@ -19,8 +19,7 @@ RUN yum -y install openssh-server epel-release pwgen  && \
     ln -s "java-${JAVA_VERSION}-oracle" $JAVA_HOME && \
     ln -s $JAVA_HOME/bin/java /usr/bin/java && \
     ln -s $JAVA_HOME/bin/javac /usr/bin/javac && \
-    rm -rf $JAVA_HOME/*src.zip && \
-    rm /tmp/* /var/cache/apk/*
+    rm -rf $JAVA_HOME/*src.zip 
 
 EXPOSE 22
 CMD ["/run.sh"]
